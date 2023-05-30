@@ -1,5 +1,18 @@
-const Home = () => {
-    return <div>test</div>;
+import { Link } from "@inertiajs/react";
+import React from "react";
+
+const AppLayout = () => {
+    return (
+        <>
+            <Link href="/test">test</Link>
+        </>
+    );
 };
 
-export default Home;
+AppLayout.layout = (page: React.ReactNode) => (
+    <div className="h-screen w-screen">
+        <div className="w-full p-4 bg-black text-white">{page}</div>
+    </div>
+);
+
+export default AppLayout;
